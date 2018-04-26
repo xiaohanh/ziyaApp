@@ -1,0 +1,56 @@
+<!-- 头部 -->
+<ion-header no-border text-center>
+  <ion-navbar color="yel" >
+     
+      <ion-title>{{name}}</ion-title>
+      <ion-buttons end>
+        <button ion-button icon only color="royal">
+               <ion-icon name="search"></ion-icon>
+        </button>
+     </ion-buttons>
+  </ion-navbar>  
+</ion-header>
+
+<ion-content padding>
+    <p class="pp">{{ time }}</p>
+    <div class="aa">
+        <button ion-button round  class="bt1">您好，有件事想问您</button>
+        <img src="assets/imgs/tou.png" class="tu">
+    </div>
+    <div>
+        <img src="{{img}}" class="tu2">
+        <button ion-button round  >您好.</button>
+    </div>
+    <div class="aa">
+        <button ion-button round  class="bt1">请问什么是不良资产</button>
+        <img src="assets/imgs/tou.png" class="tu">
+    </div>
+    <div>
+        <img src="{{img}}" class="tu2">
+        <button ion-button round  >不良资产是指...</button>
+    </div>
+    
+
+  </ion-content>
+
+
+
+<ion-footer>
+   
+
+       <div class="foot">
+                <ion-icon name="mic" color='yel' ></ion-icon> 
+       </div>
+       <div class="foot">
+                <ion-input type="text" placeholder="输入聊天内容……" class="icon1"></ion-input>
+              
+      </div>
+       <div class="foot">
+              <ion-icon name='happy' color='yel' end class="icon2"></ion-icon>
+           
+      </div>
+     <div class="foot">
+                <ion-icon name='add-circle'color='yel' end class="icon3"></ion-icon> 
+    </div>
+ 
+</ion-footer>

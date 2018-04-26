@@ -1,0 +1,23 @@
+<!-- 头部 -->
+<ion-header no-border text-center>
+  <ion-navbar color="yel" >
+     
+      <ion-title>系统信息</ion-title>
+      <ion-buttons end>
+        
+       </ion-buttons>
+  </ion-navbar>  
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="dialogue(item)" class="dia">
+      <ion-avatar item-start>
+        <img src="{{ item.img }}">
+      </ion-avatar>
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.line }}</p>
+      <ion-note item-end>{{  item.time }}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

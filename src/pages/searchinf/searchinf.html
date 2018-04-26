@@ -1,0 +1,90 @@
+<!-- 头部 -->
+<ion-header no-border text-center>
+    <ion-navbar color="yel" >
+       
+        <ion-title>找信息</ion-title>
+        <ion-buttons end>
+            <button ion-button icon only color="royal">
+                   <ion-icon name="search"></ion-icon>
+            </button>
+         </ion-buttons>
+    </ion-navbar>  
+ </ion-header>
+
+  <!-- 主体内容 -->
+  <ion-content padding>
+      <ion-searchbar placeholder="输入你想找的信息，试试吧"></ion-searchbar>
+      
+      <ion-list>
+          
+          <ion-item>
+              <ion-select interface="popover" placeholder="信息类型" class="select">
+                <ion-option>资产包转让</ion-option>
+                <ion-option>商业保理</ion-option>
+                <ion-option>委外催收</ion-option>
+                <ion-option>固产转让</ion-option>
+                <ion-option>法律服务</ion-option>
+                <ion-option>悬赏信息</ion-option>
+              </ion-select>
+      
+              <ion-select interface="popover" placeholder="地区" class="select">
+                  <ion-option>全国</ion-option>
+                  <ion-option>北京</ion-option>
+                  <ion-option>河北</ion-option>
+                  <ion-option>河南</ion-option>
+                  <ion-option>浙江</ion-option>
+                  <ion-option>湖南</ion-option>
+                </ion-select>
+            
+               <ion-select interface="popover" placeholder="更多" class="select">
+              
+                    <ion-option>金额</ion-option>
+                    <ion-option>债权资产包</ion-option>
+                    <ion-option>银行资产包</ion-option>
+                    <ion-option>一手资产包</ion-option>
+                    <ion-option>二手资产包</ion-option>
+                    <ion-option>三首资产包</ion-option>
+               </ion-select>
+           </ion-item>
+  
+           
+      </ion-list>
+       <!-- 上拉加载ion-infinite-scroll -->
+   <ion-list>
+      <ion-item *ngFor="let i of items">
+         
+              <div class="ee">
+                  <h3>资产包转让&nbsp;&nbsp;<span class="cc">--FB001</span></h3>
+              </div>
+              <div class="dd">
+                   <div class="ff">
+                       <img src="assets/imgs/money2.png" class="im" >
+                   </div>   
+                   <div class="hh">
+                      <p>地区:&nbsp;<span class="gg">北京</span></p>
+                      <p>来源:&nbsp;<span class="gg">银行</span></p>
+                      <p>资产包类型:&nbsp;<span class="gg">抵押</span></p>
+                    </div>
+                   
+                    <div class="hh">
+                        <p class="pp">300万</p>
+                        <p>转让价</p>
+                   </div> 
+                   <div class="ah">
+                      <ion-icon name="arrow-forward" (click)="detail()"></ion-icon>
+                  </div>    
+              </div>      
+                  
+      </ion-item>
+    </ion-list>
+   
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  
+
+    
+
+  
+  
+  </ion-content>
